@@ -1,5 +1,4 @@
 import _ from 'lodash'
-// import Demo from './assets/demo-1.png'
 import './style.css'
 import a from './components/a'
 
