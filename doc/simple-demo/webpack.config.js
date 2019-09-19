@@ -9,8 +9,9 @@ module.exports = {
   },
   output: {
     filename: '[name].[contenthash].bundle.js',
-    chunkFilename: '[name].bundle.js',
-    publicPath: '/'
+    path: path.resolve(__dirname, 'dist'),
+    // chunkFilename: '[name].bundle.js',
+    // publicPath: '/'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -23,6 +24,7 @@ module.exports = {
     })
   ],
   optimization: {
+    moduleIds: 'hashed',
     runtimeChunk: 'single', // some common library will be cached
     splitChunks: {
       cacheGroups: {

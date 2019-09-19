@@ -1,4 +1,5 @@
 import _ from 'lodash'
+// import print from './print'
 
 function component () {
   const element = document.createElement('div')
@@ -7,16 +8,18 @@ function component () {
 
   button.innerHTML = 'Load print.js'
 
-  element.innerHTML = _.join(['Hello', 'World'], ' ')
+  element.innerHTML = _.join(['Hello', 'World', 'Aaron'], ' ')
   element.appendChild(br)
   element.appendChild(button)
 
-  button.onclick = e => import(/* webpackChunkName: "print" */ './print').then(
-    module => {
-      const print = module.default
-      print()
-    }
-  )
+  // button.onclick = e => import(/* webpackChunkName: "print" */ './print').then(
+  //   module => {
+  //     const print = module.default
+  //     print()
+  //   }
+  // )
+
+  // button.onclick = print.bind(null, 'Hello webpack!')
 
   return element
 }

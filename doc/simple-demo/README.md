@@ -1,1 +1,1 @@
-<!-- https://webpack.js.org/guides/code-splitting/#entry-points -->
+<!-- https://webpack.js.org/guides/author-libraries/ -->
