@@ -20,7 +20,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Caching'
+      hash: true,
+      title: 'Webpack Simple Demo',
+      template: './index.html',
+      filename: './index.html'
     })
   ],
   optimization: {
